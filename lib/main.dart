@@ -13,7 +13,10 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.teal,
+            primary: Colors.teal.shade50,
+            secondary: Colors.teal.shade300),
         textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Open Sans'),
         useMaterial3: true,
       ),
