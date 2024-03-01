@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 class JoinCourseMobileButton extends StatelessWidget {
   final String title;
 
-  const JoinCourseMobileButton({super.key, required this.title});
+  final Color buttonColor;
+
+  const JoinCourseMobileButton(
+      {super.key, required this.title, required this.buttonColor});
 
   @override
   Widget build(BuildContext context) {
@@ -12,8 +15,7 @@ class JoinCourseMobileButton extends StatelessWidget {
       height: 50,
       margin: const EdgeInsets.only(bottom: 10),
       decoration: BoxDecoration(
-          color: const Color.fromARGB(255, 31, 229, 146),
-          borderRadius: BorderRadius.circular(5)),
+          color: buttonColor, borderRadius: BorderRadius.circular(5)),
       child: Center(
         child: Text(
           title,

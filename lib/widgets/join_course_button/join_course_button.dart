@@ -6,17 +6,27 @@ import 'package:responsive_builder/responsive_builder.dart';
 class CallToAction extends StatelessWidget {
   final String title;
 
+  final Color buttonColor;
+
   const CallToAction({
     super.key,
     required this.title,
+    required this.buttonColor,
   });
 
   @override
   Widget build(BuildContext context) {
     return ScreenTypeLayout.builder(
-      desktop: (context) => JoinCourseDeskTop(title: title),
-      tablet: (context) => JoinCourseDeskTop(title: title),
-      mobile: (context) => JoinCourseMobileButton(title: title),
+      desktop: (context) => JoinCourseDeskTop(
+        title: title,
+        buttonColor: Theme.of(context).colorScheme.secondary,
+      ),
+      tablet: (context) => JoinCourseDeskTop(
+        title: title,
+        buttonColor: buttonColor,
+      ),
+      mobile: (context) =>
+          JoinCourseMobileButton(title: title, buttonColor: buttonColor),
     );
   }
 }

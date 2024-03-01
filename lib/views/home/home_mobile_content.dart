@@ -7,13 +7,16 @@ class HomeMobileContent extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Column(
+    return Column(
       children: [
-        CourseDetails(),
-        SizedBox(
+        const CourseDetails(),
+        const SizedBox(
           height: 30,
         ),
-        CallToAction(title: 'Join Course'),
+        CallToAction(
+          title: 'Join Course',
+          buttonColor: Theme.of(context).colorScheme.secondary,
+        ),
       ],
     );
   }
