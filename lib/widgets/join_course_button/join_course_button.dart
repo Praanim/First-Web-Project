@@ -1,3 +1,4 @@
+import 'package:basic_website/extension/hover_extension.dart';
 import 'package:basic_website/widgets/join_course_button/join_course_desktop_button.dart';
 import 'package:basic_website/widgets/join_course_button/join_course_mobile_button.dart';
 import 'package:flutter/material.dart';
@@ -27,6 +28,6 @@ class CallToAction extends StatelessWidget {
       ),
       mobile: (context) =>
           JoinCourseMobileButton(title: title, buttonColor: buttonColor),
-    );
+    ).showCourserOnHover.moveUpOnHover;
   }
 }

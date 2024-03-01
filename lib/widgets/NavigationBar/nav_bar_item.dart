@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:basic_website/extension/hover_extension.dart';
 
 class NavBarItem extends StatelessWidget {
   ///title for the navbar item
@@ -12,6 +13,6 @@ class NavBarItem extends StatelessWidget {
       title,
       style: const TextStyle(fontSize: 18 //TODO:keep this is constants file
           ),
-    );
+    ).showCourserOnHover.moveUpOnHover;
   }
 }
